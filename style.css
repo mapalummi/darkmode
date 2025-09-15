@@ -121,3 +121,26 @@ input.testInput:checked + label.testLabel:after {
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
+label.testLabel svg {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  top: 40px;
+  z-index: 100;
+}
+label.testLabel svg.moon {
+  left: 340px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+label.testLabel svg.sun {
+  left: 40px;
+  fill: #fff;
+  transition: 0.3s;
+}
+input.testInput:checked + label.testLabel svg.moon {
+  fill: #fff;
+}
+input.testInput:checked + label.testLabel svg.sun {
+  fill: #7e7e7e;
+}
