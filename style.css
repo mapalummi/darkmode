@@ -155,7 +155,7 @@ input.testInput:checked + label.testLabel svg.sun {
 
 /* Second Toggle Switch */
 .second-toggle label {
-  width: 100px;
+  width: 80px;
   height: 40px;
   position: relative;
   display: block;
@@ -190,7 +190,7 @@ input.testInput:checked + label.testLabel svg.sun {
 }
 
 .second-toggle input:checked + label:after {
-  left: 97px;
+  left: 77px;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
@@ -210,12 +210,12 @@ input.testInput:checked + label.testLabel svg.sun {
 }
 
 .second-toggle label svg.second-moon {
-  left: 69px;
+  left: 49px;
   fill: #7e7e7e;
   transition: 0.3s;
 }
 
-.second-toggle nput:checked + label svg.second-sun {
+.second-toggle input:checked + label svg.second-sun {
   fill: #7e7e7e;
 }
 
