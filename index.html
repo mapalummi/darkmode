@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
+    <main>
+    <section class="simple-toggle-slider">
+        <h3>Simple Toggle Slider</h3>
       <label class="switch">
         <input type="checkbox" id="darkModeToggle" />
         <div class="slider round"></div>
       </label>
-    </div>
+    </section>
 
     <!-- Toggle Switch with Icons -->
-    <div>
+    <section class="big-toggle-slider">
+        <h3>Big Toggle Slider with Icons</h3>
       <input class="testInput" type="checkbox" id="dm-toggle" />
       <label class="testLabel" for="dm-toggle">
         <svg class="moon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,10 +36,11 @@
           />
         </svg>
       </label>
-    </div>
+    </section>
     <!-- Toggle Switch with Icons -->
 
-    <div class="second-toggle">
+    <section class="second-toggle">
+        <h3>Little Toggle Slider with Icons</h3>
       <input  type="checkbox" id="second-toggle" />
       <label  for="second-toggle">
     
@@ -55,8 +59,15 @@
           />
         </svg>
       </label>
-    </div>
-   
+    </section>
+
+    <section class="css-toggle">
+        <h3>CSS Only Toggle Slider</h3>
+        <label class="darkmode-toggle">
+      <input type="checkbox" id="darkmode-toggle-chkbx" />
+    </label>
+    </section>
+   </main>
 
     <script src="script.js"></script>
   </body>
