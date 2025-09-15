@@ -6,3 +6,6 @@ function darkMode(){
 
 const toggle = document.getElementById('darkModeToggle');
 toggle.addEventListener('change', darkMode);
+
+const DmToggle = document.getElementById('dm-toggle');
+DmToggle.addEventListener('change', darkMode);
