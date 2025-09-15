@@ -35,14 +35,25 @@ main {
 
 h3 {
   padding-bottom: 12px;
+  color: #777;
+}
+
+.big-toggle-slider {
+  width: 100vw;
+  height: 280px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .simple-toggle-slider,
-.big-toggle-slider,
 .second-toggle,
 .css-toggle {
   width: 100vw;
-  height: 250px;
+  height: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -292,4 +303,83 @@ input.testInput:checked + label.testLabel svg.sun {
 :root:has(#darkmode-toggle-chkbx:checked) {
   --color-bg: black;
   --color-text: white;
+}
+
+/* CSS TOGGLE SLIDER WITH ICONS */
+.darkmode-toggle input {
+  display: none;
+}
+
+.darkmode-toggle {
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s;
+}
+
+.darkmode-toggle:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 19px;
+  height: 19px;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.darkmode-toggle:has(#darkmode-toggle-chkbx:checked) {
+  background: #242424;
+}
+
+.darkmode-toggle:has(#darkmode-toggle-chkbx:checked)::before {
+  transform: translateX(25px);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+:root:has(#darkmode-toggle-chkbx:checked) {
+  --color-bg: black;
+  --color-text: white;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root:not(:has(#darkmode-toggle-chkbx:checked)) {
+    --color-bg: #111;
+    --color-text: #f5f5f5;
+  }
+} */
+
+label svg {
+  position: absolute;
+  width: 14px;
+  height: auto;
+  top: 5px;
+  z-index: 100;
+}
+
+label svg.sun {
+  left: 5px;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+label svg.moon {
+  left: 32px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+
+.darkmode-toggle:has(input:checked) svg.sun {
+  fill: #7e7e7e;
+}
+
+.darkmode-toggle:has(input:checked) svg.moon {
+  fill: #fff;
 }
