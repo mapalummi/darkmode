@@ -83,7 +83,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* YT Test */
+/* YT Toggle Switch */
 label.testLabel {
   width: 500px;
   height: 200px;
@@ -95,6 +95,7 @@ label.testLabel {
   cursor: pointer;
   transition: 0.3s;
 }
+
 label.testLabel:after {
   content: "";
   width: 180px;
@@ -107,14 +108,17 @@ label.testLabel:after {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
+
 input.testInput {
   width: 0;
   height: 0;
   visibility: hidden;
 }
+
 input.testInput:checked + label.testLabel {
   background: #242424;
 }
+
 input.testInput:checked + label.testLabel:after {
   left: 490px;
   transform: translateX(-100%);
@@ -128,19 +132,93 @@ label.testLabel svg {
   top: 40px;
   z-index: 100;
 }
+
 label.testLabel svg.moon {
   left: 340px;
   fill: #7e7e7e;
   transition: 0.3s;
 }
+
 label.testLabel svg.sun {
   left: 40px;
   fill: #fff;
   transition: 0.3s;
 }
+
 input.testInput:checked + label.testLabel svg.moon {
   fill: #fff;
 }
+
 input.testInput:checked + label.testLabel svg.sun {
+  fill: #7e7e7e;
+}
+
+/* Second Toggle Switch */
+.second-toggle label {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 50px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.second-toggle label:after {
+  content: "";
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 45px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.second-toggle input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.second-toggle input:checked + label {
+  background: #242424;
+}
+
+.second-toggle input:checked + label:after {
+  left: 95px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.second-toggle label svg {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 10px;
+  z-index: 100;
+}
+
+.second-toggle label svg.second-moon {
+  left: 58px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+
+.second-toggle label svg.second-sun {
+  left: 12px;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+.second-toggle input:checked + label svg.second-moon {
+  fill: #fff;
+}
+
+.second-toggle nput:checked + label svg.second-sun {
   fill: #7e7e7e;
 }
