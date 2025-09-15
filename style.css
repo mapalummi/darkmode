@@ -1,6 +1,8 @@
 :root {
   --color-bg: white;
   --color-text: black;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --shadow-color-light: rgba(0, 0, 0, 0.19);
 }
 
 * {
@@ -24,6 +26,8 @@ body {
 body.dark-mode {
   --color-bg: black;
   --color-text: white;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --shadow-color-light: rgba(255, 255, 255, 0.05);
 }
 
 main {
@@ -41,7 +45,7 @@ h3 {
 .big-toggle-slider {
   width: 100vw;
   height: 280px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset;
+  box-shadow: 0 4px 8px 0 var(--shadow-color) inset, 0 6px 20px 0 var(--shadow-color-light) inset;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +57,7 @@ h3 {
 .css-toggle {
   width: 100vw;
   height: 150px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset;
+  box-shadow: 0 4px 8px 0 var(--shadow-color) inset, 0 6px 20px 0 var(--shadow-color-light) inset;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,8 +137,8 @@ label.testLabel {
   background: #ebebeb;
   border-radius: 200px;
   box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-  cursor: pointer;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 label.testLabel:after {
@@ -203,8 +207,8 @@ input.testInput:checked + label.testLabel svg.sun {
   background: #ebebeb;
   border-radius: 40px;
   box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-  cursor: pointer;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .second-toggle label:after {
@@ -272,7 +276,6 @@ input.testInput:checked + label.testLabel svg.sun {
 .darkmode-toggle {
   width: 50px;
   height: 25px;
-  background: #ccc;
   border-radius: 50px;
   display: inline-block;
   position: relative;
@@ -293,7 +296,7 @@ input.testInput:checked + label.testLabel svg.sun {
 }
 
 .darkmode-toggle:has(#darkmode-toggle-chkbx:checked) {
-  background: #4caf50;
+  background: #242424;
 }
 
 .darkmode-toggle:has(#darkmode-toggle-chkbx:checked)::before {
@@ -313,7 +316,6 @@ input.testInput:checked + label.testLabel svg.sun {
 .darkmode-toggle {
   width: 50px;
   height: 25px;
-  background: #ccc;
   border-radius: 50px;
   display: inline-block;
   position: relative;
@@ -348,13 +350,6 @@ input.testInput:checked + label.testLabel svg.sun {
   --color-bg: black;
   --color-text: white;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root:not(:has(#darkmode-toggle-chkbx:checked)) {
-    --color-bg: #111;
-    --color-text: #f5f5f5;
-  }
-} */
 
 label svg {
   position: absolute;
